@@ -1,0 +1,385 @@
+/* 声明字体图标 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?tomleg');
+    src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?tomleg') format('truetype'),
+        url('../fonts/icomoon.woff?tomleg') format('woff'),
+        url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/* 版心 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.style_red {
+    color: #c81623;
+}
+
+/* 快捷导航模块 */
+.shortcut {
+    height: 31px;
+    line-height: 31px;
+    /*垂直居中*/
+    background-color: #f1f1f1;
+}
+
+.shortcut ul li {
+    float: left;
+}
+
+/* 选择所有偶数的小li */
+.shortcut .fr ul li:nth-of-type(2n) {
+    width: 1px;
+    height: 12px;
+    background-color: #666666;
+    margin: 9px 15px;
+}
+
+.arrow-icon::after {
+    font-family: 'icomoon';
+    content: '\e91e';
+    margin-left: 6px;
+
+}
+
+/* header头部制作 */
+.header {
+    position: relative;
+    height: 105px;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    width: 171px;
+    height: 61px;
+}
+
+.logo a {
+    display: block;
+    width: 171px;
+    /*宽高和logo一样大*/
+    height: 61px;
+    background: url(../images/logo.png);
+    /*京东做法*/
+    /* font-size: 0; */
+    /* 淘宝做法让文字隐藏 */
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.search {
+    position: absolute;
+    left: 346px;
+    top: 25px;
+    width: 538px;
+    height: 36px;
+    border: 2px solid #b1191a;
+    left: 346px;
+
+}
+
+.search input {
+    float: left;
+    width: 454px;
+    height: 32px;
+    /*css3模型不需要去减*/
+    padding-left: 10px;
+}
+
+.search button {
+    /*加浮动不然会掉下来，因为有缝隙，加浮动就紧挨着了更好匹配大盒子宽度*/
+    float: left;
+    width: 80px;
+    height: 32px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #b1191a;
+
+}
+
+.hotwords {
+    position: absolute;
+    top: 66px;
+    left: 346px;
+}
+
+.hotwords a {
+    margin: 0 10px;
+}
+
+.shopcar {
+    position: absolute;
+    right: 60px;
+    top: 25px;
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+}
+
+.shopcar::before {
+    font-family: 'icomoon';
+    content: '\e93a';
+    margin-right: 5px;
+    color: #b1191a;
+
+}
+
+.shopcar::after {
+    font-family: 'icomoon';
+    content: '\e920';
+    margin-left: 10px;
+    color: #c4c4c4;
+}
+
+.count {
+    position: absolute;
+    top: -5px;
+    /* 最好用left，因为数量变大往右走 */
+    /* right: 20px; */
+    left: 105px;
+    height: 14px;
+    /*会继承父盒子的35px，所以要加line-height修改*/
+    line-height: 14px;
+    color: #fff;
+    background-color: #b1191a;
+    /*稍微挤开一点点购物车统计盒子*/
+    padding: 0 5px;
+    /*三个圆角为高度的一半*/
+    border-radius: 7px 7px 7px 0;
+
+}
+
+/*nav模块制作*/
+.nav {
+    height: 47px;
+    border-bottom: 2px solid #b1191a;
+}
+
+.nav .dropdown {
+    float: left;
+    width: 210px;
+    height: 45px;
+    background-color: #b1191a;
+
+}
+
+.nav .items {
+    float: left;
+}
+
+.dropdown .dt {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+}
+
+.dropdown .dd {
+    /* display: none; */
+    width: 210px;
+    height: 465px;
+    background-color: #c81623;
+    margin-top: 2px;
+
+}
+
+.dropdown .dd ul li {
+    position: relative;
+    height: 31px;
+    line-height: 31px;
+    /*左边框*/
+    margin-left: 2px;
+    /*文字距离左边框的一小段距离*/
+    padding-left: 10px;
+}
+
+.dropdown .dd ul li:hover {
+    background-color: #fff;
+}
+
+.dropdown .dd ul li::after {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    content: '\e920';
+    font-family: 'icomoon';
+    color: #fff;
+    font-size: 14px;
+
+}
+
+/*注意文字是属于a的不是属于li的*/
+.dropdown .dd ul li a {
+    color: #fff;
+    font-size: 14px;
+}
+
+/*注意此写法，是经过之后的a颜色变化*/
+/* 如果是 .dropdown .dd ul li a:hover 
+则鼠标经过li出现全白了，但是未经过a*/
+.dropdown .dd ul li:hover a {
+    color: #c81623;
+}
+
+.navitems ul li {
+    float: left;
+}
+
+/* 给a设置而不是给li设置方便用户点击 */
+.navitems ul li a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    padding: 0 25px;
+
+}
+
+/* 底部模块制作 */
+.footer {
+    height: 415px;
+    background-color: #f5f5f5;
+    /* 底和上边的距离 */
+    padding-top: 30px;
+
+}
+
+.mod_service {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+
+.mod_service ul li {
+    float: left;
+    /*自加改成240px*/
+    width: 240px;
+    height: 50px;
+    padding-left: 35px;
+}
+
+
+/*添加精灵图start*/
+/* .mod_service ul li h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: url(../images/icons.png) no-repeat -252px -3px;
+    margin-right: 8px;
+} */
+.mod_service ul li h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: url(../images/icons.png) no-repeat;
+    margin-right: 8px;
+}
+
+.mod_service ul li:nth-child(1) h5 {
+    background-position: -252px -3px;
+
+}
+
+.mod_service ul li:nth-child(2) h5 {
+    background-position: -255px -54px;
+
+}
+
+.mod_service ul li:nth-child(3) h5 {
+    background-position: -257px -106px;
+
+}
+
+.mod_service ul li:nth-child(4) h5 {
+    background-position: -258px -157px;
+
+}
+
+.mod_service ul li:nth-child(5) h5 {
+    background-position: -258px -209px;
+
+}
+
+
+/* 添加精灵图end */
+
+.service_txt h4 {
+    /* 自加把文字挤下来一点点start */
+    display: block;
+    margin-top: 6px;
+    /* 自加把文字挤下来一点点end */
+    font-size: 14px;
+    color: #333333;
+}
+
+.service_txt p {
+    font-size: 12px;
+    color: #666666;
+}
+
+.mod_help {
+    height: 185px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.mod_help dl {
+    float: left;
+    width: 200px;
+}
+
+.mod_help dl:last-child {
+    width: 90px;
+    text-align: center;
+}
+
+.mod_help dl dt {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* 自加二维码宽高限制start */
+.mod_help dl:last-child img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 自加二维码宽高限制end */
+
+.mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.links {
+    margin-bottom: 15px;
+}
+
+.links a {
+    margin: 0 3px;
+}
+
+.copyright {
+    line-height: 20px;
+}

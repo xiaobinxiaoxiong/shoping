@@ -1,0 +1,6 @@
+安装说明
+下载压缩包并解压，首先运行ftp.reg，导入注册表。
+
+进入文件夹【CuteFTPPro_8.0.5】，双击【cuteftppro.exe】运行软件，第一次运行会要求你填入ftp站点信息，直接关闭，然后
+
+依次选择：Tool-Global Options-Display-Language-Chinese.lng -Apply-Ok，即可设置为简体中文语言，退出后重新打开就会显示为简体中文了。
